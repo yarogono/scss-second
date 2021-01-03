@@ -1,0 +1,28 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  background-color: #f3ede8;
+  letter-spacing: 2.2px;
+  padding: 65px;
+  font-weight: 600;
+  text-transform: uppercase;
+  .footer__columns {
+    font-size: 10px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .column__title {
+      opacity: 0.5;
+      margin-bottom: 25px;
+    }
+    &:nth-child(2) {
+      border-left: 1px $black solid;
+      border-right: 1px $black solid;
+    }
+    span {
+      cursor: pointer;
+    }
+  }
+}

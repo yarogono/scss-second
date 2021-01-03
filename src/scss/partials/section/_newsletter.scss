@@ -1,0 +1,57 @@
+.newsletter {
+  padding: 60px 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h5 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    line-height: 14px;
+    margin-bottom: 35px;
+  }
+  p {
+    margin-bottom: 55px;
+    font-family: $freight;
+    font-size: 40px;
+    line-height: 45px;
+    width: 45%;
+    opacity: 0.5;
+  }
+  .newsletter__form {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    .newsletter__input {
+      border-bottom: 1px $black solid;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 45%;
+      opacity: 0.5;
+      position: relative;
+      input {
+        padding: 20px 60px 20px 0;
+        border: none;
+        font-size: 35px;
+        font-family: $freight;
+        outline: none;
+      }
+      button {
+        position: absolute;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        border: 1px $black solid;
+        box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.5);
+        transition: 0.2s all ease-in-out;
+        &:hover {
+          background-color: $black;
+          color: white;
+        }
+      }
+    }
+  }
+}

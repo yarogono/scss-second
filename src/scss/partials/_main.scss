@@ -1,0 +1,115 @@
+// Extends
+@import "../_extends";
+
+// Section
+@import "section/_gift";
+@import "section/_mask";
+@import "section/_images";
+@import "section/_blog";
+@import "section/newsletter";
+
+.main__halves {
+  padding: 40px 0px;
+}
+.halves {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(252, 236, 95, 0.35) 5%,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    )
+    $orange;
+  img {
+    width: 100%;
+    height: 100%;
+    &:last-child {
+      display: none;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+  .halves__half {
+    width: 50%;
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    button {
+      cursor: pointer;
+      width: 240px;
+      line-height: 55px;
+      text-transform: uppercase;
+      font-size: 10px;
+      margin-top: 65px;
+      letter-spacing: 2.2px;
+      background-color: $orange;
+      border: 2px solid $black;
+      opacity: 0.6;
+      font-weight: 600;
+      transition: background-color 0.2s ease-in-out;
+      &:hover {
+        background-color: $black;
+        color: white;
+      }
+    }
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    margin-bottom: 27px;
+    line-height: 15px;
+    opacity: 0.5;
+  }
+  p {
+    font-family: $freight;
+    width: 70%;
+    font-size: 34px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 25px;
+    opacity: 0.6;
+    text-indent: -0.5em;
+  }
+}
+.halves__img {
+  width: 50%;
+  height: 100%;
+  &:hover {
+    img:first-child {
+      display: none;
+    }
+    img:last-child {
+      display: inline-block;
+    }
+  }
+}
+
+.several-halves {
+  padding: 60px 140px;
+  &:nth-child(2) {
+    .halves,
+    button {
+      background-color: #f9dbbe;
+      display: flex;
+      justify-content: space-between;
+      span {
+        height: 55px;
+        width: 55px;
+        border-left: dashed $black;
+      }
+    }
+    button {
+      padding-left: 25px;
+    }
+  }
+}
