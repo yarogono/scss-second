@@ -3,6 +3,10 @@
 
 // Section
 @import "section/_gift";
+@import "section/_mask";
+@import "section/_images";
+@import "section/_blog";
+@import "section/newsletter";
 
 .main__halves {
   padding: 40px 0px;
@@ -20,7 +24,7 @@
       transparent,
       transparent
     )
-    #f9dbbe;
+    $orange;
   img {
     width: 100%;
     height: 100%;
@@ -46,7 +50,7 @@
       font-size: 10px;
       margin-top: 65px;
       letter-spacing: 2.2px;
-      background-color: #f9dbbe;
+      background-color: $orange;
       border: 2px solid $black;
       opacity: 0.6;
       font-weight: 600;
@@ -67,7 +71,7 @@
     opacity: 0.5;
   }
   p {
-    font-family: "freight-display-pro", "Times New Roman", serif;
+    font-family: $freight;
     width: 70%;
     font-size: 34px;
     line-height: 38px;
@@ -91,29 +95,21 @@
 }
 
 .several-halves {
-  padding: 40px 140px;
-}
-
-.several-halves:nth-child(2) {
-  .halves,
-  button {
-    background-color: #ffa67a;
-    display: flex;
-    justify-content: space-between;
-    span {
-      height: 55px;
-      width: 55px;
-      border-left: dashed $black;
+  padding: 60px 140px;
+  &:nth-child(2) {
+    .halves,
+    button {
+      background-color: #f9dbbe;
+      display: flex;
+      justify-content: space-between;
+      span {
+        height: 55px;
+        width: 55px;
+        border-left: dashed $black;
+      }
     }
-  }
-  button {
-    padding-left: 25px;
-  }
-}
-
-.several-halves:last-child {
-  .halves,
-  button {
-    background-color: #ff97a8;
+    button {
+      padding-left: 25px;
+    }
   }
 }

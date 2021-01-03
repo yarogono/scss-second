@@ -17,7 +17,7 @@
   }
   h3 {
     font-size: 34px;
-    font-family: "freight-display-pro", "Times New Roman", serif;
+    font-family: $freight;
   }
 }
 
@@ -48,7 +48,7 @@
   align-items: center;
   width: 100%;
   h5 {
-    font-family: "Montserrat";
+    font-family: $proxima;
     font-size: 10px;
     letter-spacing: 2.2px;
     line-height: 15px;
@@ -57,14 +57,14 @@
     opacity: 0.6;
   }
   h3 {
-    font-family: "freight-display-pro", "Times New Roman", serif;
+    font-family: $freight;
     font-size: 30px;
     font-style: italic;
     margin-bottom: 20px;
     line-height: 38px;
   }
   span {
-    font-family: "Montserrat";
+    font-family: $proxima;
     font-size: 11px;
     height: 23px;
     line-height: 24px;
@@ -72,7 +72,7 @@
     opacity: 0.5;
   }
   button {
-    font-family: "Montserrat";
+    font-family: $proxima;
     width: 45%;
     margin: 32px 0px 10px;
     border: 1px $black solid;
