@@ -5,6 +5,7 @@ import minify from "gulp-csso";
 import autoprefixer from "gulp-autoprefixer";
 import ws from "gulp-webserver";
 import gpug from "gulp-pug";
+import ghPages from "gulp-gh-pages";
 
 sass.compiler = require("node-sass");
 
@@ -49,16 +50,26 @@ const watch = () => {
   gulp.watch(routes.pug.watch, pug);
 };
 
+const gh = () => gulp.src("dist/**/*").pipe(ghPages());
+
 const webserver = () => gulp.src("dist").pipe(ws({ livereload: true }));
 
 const clean = () => del(["dist/styles.css", "dist/index.html"]);
 
+// build delete for preventing conflict
 const prepare = gulp.series([clean]);
 
+// pug transcompile
 const assets = gulp.series([reset, styles, pug]);
 
-const postDev = gulp.parallel([webserver]);
+// excute webserver
+const live = gulp.parallel([webserver, watch]);
 
-const live = gulp.parallel([watch]);
+// for build
+export const build = gulp.series([prepare, assets]);
 
-export const dev = gulp.series([prepare, assets, postDev, live]);
+// for dev(webserver)
+export const dev = gulp.series([build, live]);
+
+// for deploy
+export const deploy = gulp.series([build, gh, clean]);
